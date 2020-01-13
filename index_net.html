@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>ar demo</title>
+    <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script>
+        THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+    </script>
+</head>
+
+<body style='margin: 0; overflow: hidden;'>
+    <a-scene
+        vr-mode-ui="enabled: false"
+		embedded
+        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+
+        <!-- Paris, 76 bd Voltaire -->
+        <!-- <a-box
+            color="yellow"
+            rotation="0 0 0"
+            scale="2 2 2"
+            gps-entity-place="longitude: 2.373923; latitude: 48.86088;">
+        </box> -->
+
+        <!-- Paris, 76 bd Voltaire -->
+        <a-box
+            color="yellow"
+            rotation="0 0 0"
+            scale="2 2 2"
+            gps-entity-place="longitude: 2.295307; latitude: 48.833190;">
+        </box>
+
+        <!-- ensaama angle cour 113 -->
+        <a-entity
+            gltf-model="./assets/action.glb"
+            rotation="0 0 0"
+            scale="3 3 3"
+            gps-entity-place="longitude: 2.295618; latitude: 48.833346;"
+            animation-mixer>
+        </a-entity>
+
+        <!-- ensaama hall -->
+        <a-entity
+            gltf-model="./assets/texture.glb"
+            rotation="0 0 0"
+            scale="1 1 1"
+            gps-entity-place="longitude: 2.295012; latitude: 48.833399;"
+            animation-mixer>
+        </a-entity>
+
+        <!-- ensaama terrasse dsaa 107 -->
+        <a-entity
+            gltf-model="./assets/Parrot.glb"
+            rotation="0 180 0"
+            scale="2 2 2"
+            gps-entity-place="longitude: 48.833720; latitude: 2.295270;"
+            animation-mixer>
+        </a-entity>
+
+        <!-- ensaama cour centrale -->
+        <a-entity
+            gltf-model="./assets/Flamingo.glb"
+            rotation="0 180 0"
+            scale="2 2 2"
+            gps-entity-place="longitude: 2.295298; latitude: 48.833338;"
+            animation-mixer>
+        </a-entity>
+
+        <a-camera gps-camera rotation-reader></a-camera>
+	</a-scene>
+
+    <!-- <script src="./main.js" charset="utf-8"></script> -->
+</body>

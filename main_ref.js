@@ -50,3 +50,5 @@ const renderPlaces = places => {
     }
 
 }
+
+renderPlaces(somePlaces)
